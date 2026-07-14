@@ -4,7 +4,6 @@ import Navbar from './common/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
-import Ecosystem from './pages/Ecosystem'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 
@@ -30,7 +29,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/ecosystem" element={<Ecosystem />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
