@@ -69,7 +69,9 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Ecosystem', path: '/ecosystem' },
+    { name: 'Programs', path: '/programs' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Contact', path: '/contact' },
   ]
 
 
@@ -78,29 +80,17 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-        ? 'py-4 bg-white/90 backdrop-blur-md shadow-md border-b border-slate-100'
-        : 'py-6 bg-transparent'
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  ${isScrolled
+        ? 'bg-white/90 backdrop-blur-md shadow-md border-b border-slate-100'
+        : 'bg-transparent'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+      <div className="max-w-360 mx-auto px-6 md:px-12 flex items-center justify-between">
 
         {/* Brand Logo & Name */}
         <div ref={logoRef} className="flex items-center space-x-3">
-          <Link to="/" className="flex items-center space-x-2 group">
-            {/* Custom SVG K-Ascend Icon so it is crisp and high resolution */}
-            <div className="relative w-8 h-8 flex items-center justify-center">
-              <svg viewBox="0 0 100 100" className="w-full h-full transform transition-transform duration-500 group-hover:scale-110">
-                {/* Left vertical bars */}
-                <rect x="15" y="10" width="18" height="80" rx="4" fill="#34B26A" />
-                {/* Middle connector/arrows pointing right-up */}
-                <path d="M40,50 L75,15 C78,12 83,14 83,18 L83,40 L58,62 L40,50 Z" fill="#21A6A6" />
-                <path d="M48,58 L80,90 C83,93 88,91 88,87 L88,65 L62,45 L48,58 Z" fill="#2777C9" />
-              </svg>
-            </div>
-            <span className="text-2xl font-bold tracking-tight text-brand-navy">
-              kollab<span className="text-brand-green">.</span>
-            </span>
+          <Link to="/" className="w-auto">
+            <img src="public/images/Main_Logo-without_taglines-removebg-preview.png" alt="KOLLAB" className="h-20 w-auto object-cover" />
           </Link>
         </div>
 
@@ -119,14 +109,11 @@ const Navbar = () => {
               )}
             </Link>
           ))}
-        </div>
 
-        {/* CTA Button */}
-        <div ref={ctaRef} className="hidden md:flex items-center">
-          <div className="flex items-center space-x-4">
+          <div className="hidden md:block">
             <Link
               to="/ecosystem"
-              className="flex items-center space-x-2 px-5 py-2.5 bg-brand-navy text-white font-medium text-sm rounded-full transition-all duration-300 hover:bg-brand-green hover:shadow-[0_4px_20px_rgba(52,178,106,0.3)] hover:-translate-y-0.5 group"
+              className="flex items-center space-x-2 px-5 py-2.5 bg-linear-to-r from-brand-green to-brand-blue text-white font-medium text-sm rounded-full transition-all duration-300 hover:bg-brand-green hover:shadow-[0_4px_20px_rgba(52,178,106,0.3)] hover:-translate-y-0.5 group"
             >
               <span>Join Ecosystem</span>
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

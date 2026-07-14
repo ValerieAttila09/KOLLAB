@@ -91,7 +91,7 @@ const Home = () => {
         visualRef={visualRef}
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-10 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-360 px-6 py-10 sm:px-8 lg:px-12">
         <div className="reveal-about rounded-[2rem] border border-slate-200 bg-brand-grey p-8 shadow-sm sm:p-10 lg:p-12">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">About KOLLAB</p>
           <h2 className="mt-4 max-w-3xl text-3xl font-black leading-tight text-brand-navy sm:text-4xl">
@@ -101,7 +101,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12">
         <div className="reveal-why grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-blue">Why KOLLAB exists</p>
@@ -128,7 +128,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12">
         <div className="reveal-what mb-10 max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">What we do</p>
           <h2 className="mt-3 text-3xl font-black text-brand-navy sm:text-4xl">Ruang yang membuat koneksi, kerja sama, dan perkembangan terasa nyata.</h2>
@@ -147,7 +147,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12">
         <div className="reveal-programs grid gap-6 lg:grid-cols-2">
           {homeContent.programs.map((program: { title: string; summary: string; cta: string; bullets: string[] }) => (
             <ProgramCard
@@ -162,7 +162,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12">
         <div className="reveal-audience rounded-[2rem] border border-slate-200 bg-brand-grey p-8 sm:p-10 lg:p-12">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-teal">Who it’s for</p>
           <h2 className="mt-3 text-3xl font-black text-brand-navy sm:text-4xl">Untuk orang-orang yang ingin tumbuh lewat komunitas yang selaras.</h2>
@@ -172,7 +172,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12">
         <div className="reveal-values mb-10 max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">Community values</p>
           <h2 className="mt-3 text-3xl font-black text-brand-navy sm:text-4xl">Nilai yang menjaga komunitas KOLLAB tetap hangat dan kredibel.</h2>
@@ -180,7 +180,7 @@ const Home = () => {
         <ValuesGrid items={values} />
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12">
         <div className="reveal-lead grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-blue">Upcoming activation</p>
@@ -200,7 +200,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-20 pt-4 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-360 px-6 pb-20 pt-4 sm:px-8 lg:px-12">
         <div className="reveal-partner rounded-[2rem] border border-slate-200 bg-gradient-to-r from-brand-green/10 via-white to-brand-blue/10 p-8 sm:p-10 lg:p-12">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">Partner With KOLLAB</p>
           <h2 className="mt-3 max-w-3xl text-3xl font-black text-brand-navy sm:text-4xl">Bersama kami, kolaborasi bisa terasa lebih dekat, relevan, dan berdampak.</h2>

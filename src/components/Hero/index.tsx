@@ -24,7 +24,7 @@ const Hero = ({
   visualRef,
 }: HeroProps) => {
   return (
-    <section className="mx-auto grid max-w-7xl gap-12 px-6 py-16 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-12 lg:py-24">
+    <section className="mx-auto grid max-w-360 gap-12 px-6 py-16 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-12 lg:py-24">
       <div className="flex flex-col justify-center">
         <div className="mb-6 inline-flex max-w-max items-center rounded-full border border-brand-green/20 bg-brand-green/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-green">
           Human Collaboration Ecosystem

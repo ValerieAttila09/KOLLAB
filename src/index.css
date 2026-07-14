@@ -141,6 +141,17 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .bg-gradient-green-blue {
   background: linear-gradient(135deg, var(--color-brand-green) 0%, var(--color-brand-teal) 50%, var(--color-brand-blue) 100%);
 }
@@ -151,8 +162,13 @@ body {
 
 /* Infinite Marquee Animation for Logos */
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
