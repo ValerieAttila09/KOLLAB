@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "headline": "Grow Through Collaboration.",
+    "subheadline": "KOLLAB adalah Human Collaboration Ecosystem untuk learner, creator, profesional, dan business builder yang ingin belajar, bertemu, berkolaborasi, dan bertumbuh bersama.",
+    "primaryCta": "Gabung Growth Circle",
+    "secondaryCta": "Pelajari Creator Class"
+  },
+  "about": {
+    "title": "Tentang KOLLAB",
+    "body": "KOLLAB hadir sebagai Human Collaboration Ecosystem yang menghubungkan orang-orang yang ingin belajar, bertemu, menciptakan, dan bertumbuh lewat komunitas yang hangat, supportif, dan bermakna."
+  },
+  "problems": [
+    "Belajar sendiri terasa lama dan tidak terarah.",
+    "Koneksi sering terasa asal dan tidak relevan.",
+    "Kolaborasi sulit dimulai tanpa ruang yang aman.",
+    "Pertumbuhan pribadi sering terhambat oleh isolasi."
+  ],
+  "solution": "KOLLAB menyatukan ruang belajar, koneksi, dan kolaborasi dalam satu ekosistem yang manusiawi, sehingga setiap orang bisa bertumbuh bersama tanpa merasa sendirian.",
+  "features": [
+    {
+      "title": "Connect",
+      "desc": "Temukan circle dan koneksi yang relevan.",
+      "microcopy": "Identitas, context, dan komunitas yang tepat.",
+      "accent": "bg-brand-green/10 text-brand-green"
+    },
+    {
+      "title": "Collaborate",
+      "desc": "Bangun proyek dan peluang bersama.",
+      "microcopy": "Kolaborasi nyata dengan arah yang jelas.",
+      "accent": "bg-brand-teal/10 text-brand-teal"
+    },
+    {
+      "title": "Grow",
+      "desc": "Kembangkan skill, reputasi, dan peluang monetisasi.",
+      "microcopy": "Momentum yang terus bergerak dan terukur.",
+      "accent": "bg-brand-blue/10 text-brand-blue"
+    }
+  ],
+  "programs": [
+    {
+      "title": "KOLLAB Creator Class",
+      "summary": "Ruang belajar skill creator, storytelling, dan monetisasi dengan mentor yang mendampingi.",
+      "cta": "Explore Creator Class",
+      "bullets": [
+        "Live session yang ringkas dan aplikatif",
+        "Feedback personal untuk portfolio dan positioning"
+      ]
+    },
+    {
+      "title": "KOLLAB Growth Circle",
+      "summary": "Ruang networking santai untuk koneksi bermakna, peluang kerja sama, dan support komunitas.",
+      "cta": "Join Growth Circle",
+      "bullets": [
+        "Mingguan dengan tema yang relevan dan hangat",
+        "Bisa memulai kolaborasi tanpa rasa canggung"
+      ]
+    }
+  ],
+  "audiences": [
+    "Aspiring Learner",
+    "Creative Builder",
+    "Professional Networker",
+    "Business Collaborator",
+    "Early Founder"
+  ],
+  "values": [
+    {
+      "title": "Belajar Tanpa Paksaan",
+      "description": "Kami menciptakan ruang yang nyaman untuk tumbuh lewat pengalaman dan dukungan.",
+      "icon": "Sparkles"
+    },
+    {
+      "title": "Kolaborasi yang Manusiawi",
+      "description": "Setiap interaksi dibangun dengan saling menghargai, terbuka, dan aman.",
+      "icon": "Handshake"
+    },
+    {
+      "title": "Koneksi yang Relevan",
+      "description": "Kami menghubungkan orang dengan tujuan yang selaras, bukan sekadar angka.",
+      "icon": "Users"
+    },
+    {
+      "title": "Momentum yang Nyata",
+      "description": "Setiap komunitas punya arah, ritual, dan kesempatan yang terasa konkret.",
+      "icon": "TrendingUp"
+    },
+    {
+      "title": "Berbagi Tanpa Batas",
+      "description": "Pengetahuan, kesempatan, dan dukungan seharusnya mudah dibagi secara tulus.",
+      "icon": "HeartHandshake"
+    }
+  ]
+}

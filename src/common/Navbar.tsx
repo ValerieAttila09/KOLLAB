@@ -1,21 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { Menu, X, ArrowUpRight, LogOut } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
+import { Menu, X, ArrowUpRight } from 'lucide-react'
 import { gsap } from 'gsap'
-import { useAuth } from '../context/AuthContext'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
-  const navigate = useNavigate()
-  const { user, logout } = useAuth()
 
-  const handleLogout = () => {
-    logout()
-    navigate('/')
-  }
-  
   const navRef = useRef<HTMLElement>(null)
   const logoRef = useRef<HTMLDivElement>(null)
   const menuLinksRef = useRef<HTMLDivElement>(null)
@@ -44,11 +36,11 @@ const Navbar = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Navbar slide down
-      gsap.fromTo(navRef.current, 
+      gsap.fromTo(navRef.current,
         { y: -100, opacity: 0 },
         { y: 0, opacity: 1, duration: 1, ease: 'power4.out' }
       )
-      
+
       // Logo and menu items staggered fade-in
       gsap.fromTo([logoRef.current, '.nav-item', ctaRef.current],
         { opacity: 0, y: -20 },
@@ -77,28 +69,22 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Ecosystem', path: '/ecosystem' },
-    { name: 'Events', path: '/events' },
-    { name: 'Partner', path: '/partner' },
     { name: 'Blog', path: '/blog' },
   ]
 
-  if (user) {
-    navLinks.splice(3, 0, { name: 'Dashboard', path: '/dashboard' })
-  }
 
   const isActive = (path: string) => location.pathname === path
 
   return (
-    <nav 
+    <nav
       ref={navRef}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'py-4 bg-white/90 backdrop-blur-md shadow-md border-b border-slate-100' 
-          : 'py-6 bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
+        ? 'py-4 bg-white/90 backdrop-blur-md shadow-md border-b border-slate-100'
+        : 'py-6 bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        
+
         {/* Brand Logo & Name */}
         <div ref={logoRef} className="flex items-center space-x-3">
           <Link to="/" className="flex items-center space-x-2 group">
@@ -124,9 +110,8 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.path}
-              className={`nav-item relative py-2 text-sm transition-colors duration-200 hover:text-brand-green ${
-                isActive(link.path) ? 'text-brand-green font-semibold' : 'text-slate-600'
-              }`}
+              className={`nav-item relative py-2 text-sm transition-colors duration-200 hover:text-brand-green ${isActive(link.path) ? 'text-brand-green font-semibold' : 'text-slate-600'
+                }`}
             >
               {link.name}
               {isActive(link.path) && (
@@ -138,44 +123,19 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <div ref={ctaRef} className="hidden md:flex items-center">
-          {user ? (
-            <div className="flex items-center space-x-4">
-              <Link
-                to="/dashboard"
-                className="flex items-center space-x-2 px-4 py-2 bg-brand-green/10 text-brand-green border border-brand-green/20 font-semibold text-xs rounded-full transition-all hover:bg-brand-green/20"
-              >
-                <span className="w-2 h-2 rounded-full bg-brand-green animate-pulse" />
-                <span>{user.name.split(' ')[0]}</span>
-              </Link>
-              <button
-                onClick={handleLogout}
-                className="p-2 text-slate-400 hover:text-red-500 hover:bg-slate-100 rounded-full transition-colors cursor-pointer"
-                title="Sign Out"
-              >
-                <LogOut className="w-4 h-4" />
-              </button>
-            </div>
-          ) : (
-            <div className="flex items-center space-x-4">
-              <Link
-                to="/login"
-                className="text-slate-600 hover:text-brand-green text-sm font-semibold transition-colors"
-              >
-                Sign In
-              </Link>
-              <Link
-                to="/ecosystem"
-                className="flex items-center space-x-2 px-5 py-2.5 bg-brand-navy text-white font-medium text-sm rounded-full transition-all duration-300 hover:bg-brand-green hover:shadow-[0_4px_20px_rgba(52,178,106,0.3)] hover:-translate-y-0.5 group"
-              >
-                <span>Join Ecosystem</span>
-                <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </Link>
-            </div>
-          )}
+          <div className="flex items-center space-x-4">
+            <Link
+              to="/ecosystem"
+              className="flex items-center space-x-2 px-5 py-2.5 bg-brand-navy text-white font-medium text-sm rounded-full transition-all duration-300 hover:bg-brand-green hover:shadow-[0_4px_20px_rgba(52,178,106,0.3)] hover:-translate-y-0.5 group"
+            >
+              <span>Join Ecosystem</span>
+              <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden p-2 text-brand-navy hover:text-brand-green transition-colors"
           aria-label="Toggle menu"
@@ -186,13 +146,13 @@ const Navbar = () => {
 
       {/* Mobile Drawer Navigation Menu */}
       {isOpen && (
-        <div 
+        <div
           ref={mobileMenuRef}
           className="fixed inset-y-0 right-0 w-full max-w-xs bg-white shadow-2xl z-50 p-8 flex flex-col md:hidden"
         >
           <div className="flex items-center justify-between mb-8">
             <span className="text-xl font-bold text-brand-navy">kollab.</span>
-            <button 
+            <button
               onClick={() => setIsOpen(false)}
               className="p-2 text-brand-navy hover:text-brand-green transition-colors"
             >
@@ -205,9 +165,8 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`mobile-nav-item py-1 transition-colors ${
-                  isActive(link.path) ? 'text-brand-green font-bold' : 'text-slate-600'
-                }`}
+                className={`mobile-nav-item py-1 transition-colors ${isActive(link.path) ? 'text-brand-green font-bold' : 'text-slate-600'
+                  }`}
               >
                 {link.name}
               </Link>
@@ -215,31 +174,13 @@ const Navbar = () => {
           </div>
 
           <div className="mobile-nav-item mt-auto space-y-4">
-            {user ? (
-              <button
-                onClick={handleLogout}
-                className="flex items-center justify-center space-x-2 w-full py-3 bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 text-center font-medium rounded-full transition-all cursor-pointer"
-              >
-                <LogOut className="w-4 h-4" />
-                <span>Sign Out</span>
-              </button>
-            ) : (
-              <>
-                <Link
-                  to="/login"
-                  className="block w-full py-3 text-center text-slate-700 hover:text-brand-green font-semibold rounded-full border border-slate-200 transition-all mb-2"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  to="/ecosystem"
-                  className="flex items-center justify-center space-x-2 w-full py-3 bg-brand-navy text-white text-center font-medium rounded-full transition-all hover:bg-brand-green"
-                >
-                  <span>Join Ecosystem</span>
-                  <ArrowUpRight className="w-4 h-4" />
-                </Link>
-              </>
-            )}
+            <Link
+              to="/ecosystem"
+              className="flex items-center justify-center space-x-2 w-full py-3 bg-brand-navy text-white text-center font-medium rounded-full transition-all hover:bg-brand-green"
+            >
+              <span>Join Ecosystem</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       )}
