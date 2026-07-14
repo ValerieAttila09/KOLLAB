@@ -1,12 +1,11 @@
 import { useEffect, useRef } from 'react'
-import { ArrowRight, BookOpen, Compass, Handshake, HeartHandshake, Sparkles, TrendingUp, Users, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, Compass, Handshake, HeartHandshake, Sparkles, TrendingUp, Users, CheckCircle2 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Hero from '../components/Hero'
 import AudienceChips from '../components/AudienceChips'
 import ValuesGrid from '../components/ValuesGrid'
-import LeadForm from '../components/LeadForm'
 import homeContent from '../data/home.json'
 import { animateHero, registerGsap, revealOnScroll } from '../animations/gsap'
 

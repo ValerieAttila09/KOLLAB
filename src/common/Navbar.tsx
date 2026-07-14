@@ -68,14 +68,18 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Ecosystem', path: '/ecosystem' },
     { name: 'Programs', path: '/programs' },
-    { name: 'Blog', path: '/blog' },
+    { name: 'Community', path: '/programs#community-activation' },
+    { name: 'Partnership', path: '/programs#partnership-program' },
     { name: 'Contact', path: '/contact' },
   ]
 
-
-  const isActive = (path: string) => location.pathname === path
+  const isActive = (path: string) => {
+    if (path === '/programs') {
+      return location.pathname === '/programs'
+    }
+    return location.pathname === path
+  }
 
   return (
     <nav
@@ -112,10 +116,10 @@ const Navbar = () => {
 
           <div className="hidden md:block">
             <Link
-              to="/ecosystem"
+              to="/programs#growth-circle"
               className="flex items-center space-x-2 px-5 py-2.5 bg-linear-to-r from-brand-green to-brand-blue text-white font-medium text-sm rounded-full transition-all duration-300 hover:bg-brand-green hover:shadow-[0_4px_20px_rgba(52,178,106,0.3)] hover:-translate-y-0.5 group"
             >
-              <span>Join Ecosystem</span>
+              <span>Join Growth Circle</span>
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
@@ -162,10 +166,10 @@ const Navbar = () => {
 
           <div className="mobile-nav-item mt-auto space-y-4">
             <Link
-              to="/ecosystem"
+              to="/programs#growth-circle"
               className="flex items-center justify-center space-x-2 w-full py-3 bg-brand-navy text-white text-center font-medium rounded-full transition-all hover:bg-brand-green"
             >
-              <span>Join Ecosystem</span>
+              <span>Join Growth Circle</span>
               <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>

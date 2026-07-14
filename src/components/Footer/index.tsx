@@ -39,8 +39,8 @@ const Footer = () => {
               <ArrowUpRight className="ml-2 h-4 w-4" />
             </a>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/ecosystem" className="inline-flex items-center rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-green/90">
-                Explore Ecosystem
+              <a href="/programs#growth-circle" className="inline-flex items-center rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-green/90">
+                Join Growth Circle
                 <Send className="ml-2 h-4 w-4" />
               </a>
               <a href="/about" className="inline-flex items-center rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-brand-teal hover:text-brand-teal">
@@ -50,13 +50,13 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-3 border-t border-slate-800 pt-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} KOLLAB. All rights reserved.</p>
-          <div className="flex gap-4">
-            <Link to="/about" className="transition hover:text-brand-green">About</Link>
-            <Link to="/ecosystem" className="transition hover:text-brand-green">Ecosystem</Link>
-            <a href="mailto:hello@kollab.id" className="transition hover:text-brand-green">hello@kollab.id</a>
+            <p>© {new Date().getFullYear()} KOLLAB. All rights reserved.</p>
+            <div className="flex gap-4">
+              <Link to="/about" className="transition hover:text-brand-green">About</Link>
+              <Link to="/programs" className="transition hover:text-brand-green">Programs</Link>
+              <Link to="/contact" className="transition hover:text-brand-green">Contact</Link>
+            </div>
           </div>
-        </div>
       </div>
     </footer>
   )

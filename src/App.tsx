@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
+import Programs from './pages/Programs'
 
 // Scroll to top on route change for seamless page transition feel
 const ScrollToTop = () => {
@@ -29,6 +30,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/programs" element={<Programs />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
