@@ -195,73 +195,69 @@ const About = () => {
   ]
 
   return (
-    <div className="py-24">
-      <div className="relative w-full bg-linear-to-b from-white to-brand-grey">
-        <section className="h-[80vh] grid grid-cols-12 max-w-360 mx-auto px-6 md:px-12 pt-8">
-          <div className="pr-8 flex flex-col justify-center items-start space-y-6 md:col-span-7 h-full">
+    <div className="py-20 sm:py-24">
+      <div className="relative w-full overflow-hidden bg-linear-to-b from-white to-brand-grey">
+        <section className="mx-auto grid min-h-[70vh] max-w-360 gap-10 px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-12 lg:py-24">
+          <div className="flex flex-col items-start justify-center space-y-6 text-center sm:text-left">
             <div className="space-y-4">
-              <div className="flex items-center gap-6">
-                <div className="w-16 h-0.5 bg-linear-to-r from-brand-green to-brand-blue" />
-                <h4 className="text-xs start-fade font-bold text-brand-green tracking-widest uppercase">about kollab</h4>
+              <div className="flex items-center justify-center gap-6 sm:justify-start">
+                <div className="h-0.5 w-16 bg-linear-to-r from-brand-green to-brand-blue" />
+                <h4 className="text-xs font-bold uppercase tracking-widest text-brand-green">about kollab</h4>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-brand-navy">
+              <h1 className="text-4xl font-bold text-brand-navy sm:text-5xl md:text-6xl">
                 Grow Through Collaboration<span className="text-brand-green">.</span>
               </h1>
-              <p className="text-slate-600 text-md">
+              <p className="text-base text-slate-600 sm:text-lg">
                 KOLLAB adalah Human Collaboration Ecosystem untuk learner, creator, profesional, dan business builder yang ingin bertumbuh melalui kolaborasi, koneksi, dan peluang nyata.
               </p>
             </div>
-            <div className="flex items-center gap-6 justify-start">
-              <div className="rounded-full size-16 border border-neutral-200 overflow-hidden flex items-center justify-center">
-                <img src="/public/images/Main_Icon-removebg-preview.png" alt="" className="size-10" />
+            <div className="flex items-center justify-center gap-6 sm:justify-start">
+              <div className="flex size-16 items-center justify-center overflow-hidden rounded-full border border-neutral-200">
+                <img src="/images/Main_Icon-removebg-preview.png" alt="" className="size-10" />
               </div>
               <p className="text-lg font-medium text-brand-blue">
                 Where Collaboration Creates Growth
               </p>
             </div>
-            <div className="flex items-center gap-4 w-full">
-              <button className="flex items-center justify-center gap-4 bg-linear-to-r text-lg from-brand-green to-brand-blue text-white py-3 px-6 rounded-lg font-medium">
-                <span className="">
-                  Join Growth Circle
-                </span>
+            <div className="flex w-full flex-col gap-3 sm:flex-row">
+              <button className="flex items-center justify-center gap-4 rounded-full bg-linear-to-r from-brand-green to-brand-blue px-6 py-3 text-lg font-medium text-white">
+                <span>Join Growth Circle</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                 </svg>
               </button>
-              <button className="flex items-center justify-center gap-4 bg-white border border-neutral-300 text-brand-navy py-3 px-6 rounded-lg font-medium">
-                <span className="">
-                  Explore Creator Class
-                </span>
+              <button className="flex items-center justify-center gap-4 rounded-full border border-neutral-300 bg-white px-6 py-3 text-lg font-medium text-brand-navy">
+                <span>Explore Creator Class</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                 </svg>
               </button>
             </div>
           </div>
+          <div className="w-full">
+            <img src="/images/Frame 3.png" alt="" className="h-full w-full object-cover" />
+          </div>
         </section>
-        <div className="absolute inset-y-0 right-0">
-          <img src="/public/images/Frame 3.png" alt="" className="w-full h-full object-cover" />
-        </div>
       </div>
 
       <div className="w-full bg-brand-grey">
-        <section className="h-screen grid grid-cols-12 max-w-360 mx-auto px-6 md:px-12 py-12">
-          <div className="md:col-span-6 h-full flex items-center justify-center">
-            <img src="/public/images/p.png" alt="" className="w-full h-auto object-contain p-6" />
+        <section className="mx-auto grid max-w-360 gap-10 px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-12 lg:py-24">
+          <div className="flex items-center justify-center">
+            <img src="/images/p.png" alt="" className="w-full max-w-[440px] object-contain p-2 sm:p-6" />
           </div>
-          <div className="flex flex-col justify-center items-start space-y-12 md:col-span-6">
+          <div className="flex flex-col items-start justify-center space-y-8 text-center sm:text-left">
             <div className="space-y-4">
               <h4 className="text-xs font-bold text-brand-green tracking-widest uppercase">
                 Why We Exist
               </h4>
-              <h2 className="text-3xl md:text-5xl font-black text-brand-navy leading-tight tracking-tight">
+              <h2 className="text-3xl font-black leading-tight tracking-tight text-brand-navy sm:text-4xl md:text-5xl">
                 Banyak orang ingin berkembang, tapi sering berjalan sendiri.
               </h2>
-              <p className="text-slate-600 leading-relaxed font-medium">
+              <p className="font-medium leading-relaxed text-slate-600">
                 Banyak learner, creator, profesional, dan business builder ingin naik level, tapi sering bingung harus mulai dari mana, tidak punya circle yang supportif, atau merasa networking terlalu kaku. KOLLAB hadir untuk membuat growth terasa lebih human, sehat, dan meaningful.
               </p>
             </div>
-            <div ref={whyExistCardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div ref={whyExistCardsRef} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {whyExistCards.map((card) => (
                 <div
                   key={card.id}
@@ -288,8 +284,8 @@ const About = () => {
         </section>
       </div>
 
-      <section ref={statsSectionRef} className="max-w-360 mx-auto px-6 md:px-12 pt-8 py-12 sm:py-16 md:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center h-full">
+      <section ref={statsSectionRef} className="mx-auto max-w-360 px-4 py-12 sm:px-6 sm:py-16 md:px-8 md:py-24 lg:px-12">
+        <div className="grid h-full items-center gap-12 lg:grid-cols-12">
           {/* Left Side - Content */}
           <div className="lg:col-span-6 space-y-6">
             {/* Header with Logo */}
@@ -416,12 +412,12 @@ const About = () => {
 
       </section>
 
-      <section className="bg-brand-grey border-y border-slate-200/50 py-24">
-        <div className="max-w-360 mx-auto px-6 md:px-12">
+      <section className="border-y border-slate-200/50 bg-brand-grey py-16 sm:py-20 md:py-24">
+        <div className="mx-auto max-w-360 px-4 sm:px-6 md:px-8 lg:px-12">
 
-          <div className="max-w-3xl space-y-4 mb-16">
-            <h4 className="text-xs font-bold text-brand-green tracking-widest uppercase">Brand Idea</h4>
-            <h2 className="text-3xl md:text-5xl font-black text-brand-navy leading-tight tracking-tight">
+          <div className="mb-12 max-w-3xl space-y-4 sm:mb-16">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-brand-green">Brand Idea</h4>
+            <h2 className="text-3xl font-black leading-tight tracking-tight text-brand-navy sm:text-4xl md:text-5xl">
               Small Pieces &rarr; One System &rarr; Growth
             </h2>
             <p className="text-base text-slate-600 font-medium leading-relaxed">
@@ -429,7 +425,7 @@ const About = () => {
             </p>
           </div>
 
-          <div ref={pipelineRef} className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          <div ref={pipelineRef} className="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8">
             {pipelineSteps.map((step, idx) => (
               <div
                 key={idx}
@@ -471,10 +467,10 @@ const About = () => {
         </div>
       </section>
 
-      <section className="max-w-360 mx-auto px-6 md:px-12 py-12 sm:py-16 md:py-24">
-        <div className="max-w-3xl space-y-4 mb-16">
-          <h4 className="text-xs font-bold text-brand-blue tracking-widest uppercase">Brand Personality</h4>
-          <h2 className="text-3xl md:text-5xl font-black text-brand-navy leading-tight tracking-tight">
+      <section className="mx-auto max-w-360 px-4 py-12 sm:px-6 sm:py-16 md:px-8 md:py-24 lg:px-12">
+        <div className="mb-12 max-w-3xl space-y-4 sm:mb-16">
+          <h4 className="text-xs font-bold uppercase tracking-widest text-brand-blue">Brand Personality</h4>
+          <h2 className="text-3xl font-black leading-tight tracking-tight text-brand-navy sm:text-4xl md:text-5xl">
             Kepribadian Brand KOLLAB.
           </h2>
           <p className="text-slate-600 font-medium leading-relaxed">
@@ -482,7 +478,7 @@ const About = () => {
           </p>
         </div>
 
-        <div ref={personalityRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div ref={personalityRef} className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-5">
           {personalities.map((trait, idx) => (
             <div
               key={idx}

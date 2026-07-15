@@ -88,17 +88,17 @@ const Home = () => {
         visualRef={visualRef}
       />
 
-      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
-        <div className="reveal-about grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="max-w-2xl">
+      <section className="mx-auto max-w-360 px-4 py-16 sm:px-6 sm:py-20 lg:px-12 lg:py-24">
+        <div className="reveal-about grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
+          <div className="max-w-2xl text-center sm:text-left">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">Tentang KOLLAB</p>
-            <h2 className="mt-4 text-4xl font-black leading-[1.1] text-brand-navy sm:text-5xl">
+            <h2 className="mt-4 text-3xl font-black leading-[1.1] text-brand-navy sm:text-4xl lg:text-5xl">
               {homeContent.about.title}
             </h2>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+            <p className="mt-6 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
               {homeContent.about.body}
             </p>
-            <div className="mt-8 space-y-4">
+            <div className="mt-8 space-y-4 text-left">
               {homeContent.problems.slice(0, 2).map((problem: string) => (
                 <div key={problem} className="flex gap-4">
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-brand-green" />
@@ -113,8 +113,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
-        <div className="reveal-why grid gap-12 lg:grid-cols-[1fr_1.2fr]">
+      <section className="mx-auto max-w-360 px-4 py-16 sm:px-6 sm:py-20 lg:px-12 lg:py-24">
+        <div className="reveal-why grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-12">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-blue">Mengapa KOLLAB Ada</p>
             <h2 className="mt-4 text-3xl font-black leading-tight text-brand-navy sm:text-4xl">
@@ -149,8 +149,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
-        <div className="reveal-what mb-12 max-w-3xl">
+      <section className="mx-auto max-w-360 px-4 py-16 sm:px-6 sm:py-20 lg:px-12 lg:py-24">
+        <div className="reveal-what mb-10 max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">Apa yang Kami Lakukan</p>
           <h2 className="mt-4 text-4xl font-black leading-tight text-brand-navy sm:text-5xl">
             Ruang untuk connect, collaborate, dan grow.
@@ -181,8 +181,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
-        <div className="reveal-programs mb-12 max-w-3xl">
+      <section className="mx-auto max-w-360 px-4 py-16 sm:px-6 sm:py-20 lg:px-12 lg:py-24">
+        <div className="reveal-programs mb-10 max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-teal">Program Kami</p>
           <h2 className="mt-4 text-4xl font-black leading-tight text-brand-navy sm:text-5xl">
             Cara kami mendampingi pertumbuhan Anda.
@@ -218,32 +218,32 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
-        <div className="w-full grid grid-cols-12 gap-8">
-          <div className="col-span-4 space-y-8">
-            <div className="w-60 flex items-center gap-2 justify-start rounded-full border border-neutral-200 shadow px-4 py-1.5 text-brand-blue">
+      <section className="mx-auto max-w-360 px-4 py-16 sm:px-6 sm:py-20 lg:px-12 lg:py-24">
+        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="space-y-8 text-center lg:text-left">
+            <div className="mx-auto flex w-full max-w-[15rem] items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-1.5 text-brand-blue shadow sm:mx-0">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-brand-green">
                 <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z" />
               </svg>
               <span className="font-semibold">Community Experience</span>
             </div>
-            <h1 className="text-6xl font-bold tracking-tighter">A space to learn, meet, and grow together.</h1>
-            <p className="text-md text-neutral-600">KOLLAB dirancang sebagai ruang yang hangat untuk bertemu orang baru, berbagi cerita, belajar dari pengalaman, dan membuka pulang kolaborasi.</p>
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl lg:text-6xl">A space to learn, meet, and grow together.</h1>
+            <p className="text-base text-neutral-600 sm:text-lg">KOLLAB dirancang sebagai ruang yang hangat untuk bertemu orang baru, berbagi cerita, belajar dari pengalaman, dan membuka pulang kolaborasi.</p>
             <div className="relative overflow-hidden rounded-2xl w-full h-auto p-8 space-y-4 bg-linear-to-r from-brand-blue to-brand-green">
               <QuoteIcon size={48} className="text-white/35"/>
-              <blockquote className="max-w-3/5 text-2xl text-white font-semibold">
+              <blockquote className="max-w-3/5 text-xl text-white font-semibold sm:text-2xl">
                 Built for people who believe growth feels better when shared.
               </blockquote>
-              <img src="/public/images/Main_Icon-removebg-preview.png" alt="" className="absolute -bottom-12 -right-20 saturate-0 size-72 opacity-50"/>
+              <img src="/images/Main_Icon-removebg-preview.png" alt="" className="absolute -bottom-12 -right-20 saturate-0 size-56 opacity-50 sm:size-72"/>
             </div>
           </div>
-          <div className="col-span-8">
-            <img src="/public/images/Frame 2.png" alt="" className="w-full h-auto" />
+          <div className="w-full">
+            <img src="/images/Frame 2.png" alt="" className="w-full h-auto" />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section className="mx-auto max-w-360 px-4 py-16 sm:px-6 sm:py-20 lg:px-12 lg:py-24">
         <div className="reveal-audience rounded-[2rem] border border-slate-200 bg-brand-grey p-8 sm:p-10 lg:p-12">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-teal">Untuk Siapa</p>
           <h2 className="mt-3 text-4xl font-black text-brand-navy sm:text-5xl">Untuk orang yang ingin tumbuh bersama komunitas yang selaras.</h2>
@@ -253,8 +253,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
-        <div className="reveal-values mb-12 max-w-3xl">
+      <section className="mx-auto max-w-360 px-4 py-16 sm:px-6 sm:py-20 lg:px-12 lg:py-24">
+        <div className="reveal-values mb-10 max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">Nilai Komunitas</p>
           <h2 className="mt-3 text-4xl font-black text-brand-navy sm:text-5xl">Nilai yang menjaga kami tetap hangat dan kredibel.</h2>
         </div>
@@ -263,7 +263,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-360 px-6 pb-20 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-360 px-4 pb-20 sm:px-6 lg:px-12">
         <div className="reveal-partner rounded-[2rem] border border-slate-200 bg-gradient-to-r from-brand-green/10 via-white to-brand-blue/10 p-8 shadow-sm sm:p-10 lg:p-12">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">Berkolaborasi Bersama Kami</p>

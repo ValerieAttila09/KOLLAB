@@ -227,9 +227,9 @@ const Programs = () => {
     <div className="overflow-hidden bg-white text-brand-navy">
       <section className="relative overflow-hidden bg-brand-grey/50 py-16 sm:py-20 md:py-24">
         <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-brand-green/10 to-transparent" />
-        <div className="mx-auto max-w-360 px-6 sm:px-8 lg:px-12">
-          <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <div className="max-w-2xl space-y-8">
+        <div className="mx-auto max-w-360 px-4 sm:px-6 lg:px-12">
+          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-12">
+            <div className="mx-auto max-w-2xl space-y-8 text-center sm:text-left">
               <div className="space-y-4">
                 <p className="text-sm font-semibold uppercase tracking-[0.32em] text-brand-green">Program Page</p>
                 <h1 className="text-4xl font-black leading-tight tracking-[-0.03em] text-brand-navy sm:text-5xl lg:text-6xl">
@@ -240,7 +240,7 @@ const Programs = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a href="#overview" className="inline-flex items-center justify-center rounded-full bg-brand-green px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-green/20 transition duration-300 hover:-translate-y-0.5 hover:bg-brand-green/90">
                   Explore Programs
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -255,12 +255,12 @@ const Programs = () => {
               </p>
             </div>
 
-            <img src="/public/images/ff1.png" alt="" className="w-full h-auto"/>
+            <img src="/images/ff1.png" alt="" className="w-full h-auto"/>
           </div>
         </div>
       </section>
 
-      <section id="overview" className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-20">
+      <section id="overview" className="mx-auto max-w-360 px-4 py-16 sm:px-6 lg:px-12 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="space-y-6">
             <p className="text-sm font-semibold uppercase tracking-[0.32em] text-brand-green">PROGRAM OVERVIEW</p>
@@ -295,7 +295,7 @@ const Programs = () => {
       </section>
 
       <section id="growth-circle" className="bg-brand-grey/50 py-16 sm:py-20">
-        <div className="mx-auto max-w-360 px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-360 px-4 sm:px-6 lg:px-12">
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div className="space-y-6">
               <p className="text-sm font-semibold uppercase tracking-[0.32em] text-brand-green">GROWTH CIRCLE</p>

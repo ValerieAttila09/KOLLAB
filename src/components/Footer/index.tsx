@@ -4,20 +4,20 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <footer className="border-t border-slate-200 bg-brand-navy">
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-          <div>
-            <Link to="/" className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-gradient-to-br from-brand-green via-brand-teal to-brand-blue p-2">
-                <div className="h-full w-full rounded-full border border-white/60" />
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-12">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr] lg:gap-10">
+          <div className="text-center sm:text-left">
+            <Link to="/" className="flex items-center justify-center gap-3 sm:justify-start">
+              <div className="size-12 relative overflow-hidden">
+                <img src="/public/images/Main_Icon-removebg-preview.png" alt="" className="absolute inset-0 size-32" />
               </div>
               <span className="text-2xl font-black tracking-tight text-white">kollab.</span>
             </Link>
-            <p className="mt-6 max-w-xl text-base leading-8 text-slate-400">
+            <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-slate-400 sm:mx-0">
               KOLLAB adalah ruang kolaboratif untuk belajar, bertemu, berkolaborasi, dan bertumbuh bersama.
             </p>
-            <div className="mt-6 flex gap-3">
-              {[Globe, Mail, MessageCircle].map((Icon, index) => (
+            <div className="mt-6 flex justify-center gap-3 sm:justify-start">
+              {[MessageCircle, Mail, MessageCircle].map((Icon, index) => (
                 <a
                   key={index}
                   href="#"
@@ -29,7 +29,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div className="rounded-[2rem] border border-slate-800 bg-slate-900/70 p-8">
+          <div className="rounded-[2rem] border border-slate-800 bg-slate-900/70 p-6 sm:p-8">
             <h3 className="text-xl font-bold text-white">Partner With KOLLAB</h3>
             <p className="mt-3 text-sm leading-8 text-slate-400">
               Kami terbuka untuk kolaborasi komunitas, workshop, program learning, dan partner yang selaras.
@@ -38,11 +38,14 @@ const Footer = () => {
               hello@kollab.id
               <ArrowUpRight className="ml-2 h-4 w-4" />
             </a>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/programs#growth-circle" className="inline-flex items-center rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-green/90">
-                Join Growth Circle
+            <div className="mt-6 flex flex-wrap justify-center gap-3 sm:justify-start">
+              <Link
+                to="/programs#growth-circle"
+                className="flex items-center space-x-2 px-5 py-2.5 bg-linear-to-r from-brand-green to-brand-blue text-white font-medium text-sm rounded-full transition-all duration-300 hover:bg-brand-green hover:shadow-[0_4px_20px_rgba(52,178,106,0.3)] hover:-translate-y-0.5 group"
+              >
+                <span>Join Growth Circle</span>
                 <Send className="ml-2 h-4 w-4" />
-              </a>
+              </Link>
               <a href="/about" className="inline-flex items-center rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-brand-teal hover:text-brand-teal">
                 About Us
               </a>
@@ -50,13 +53,13 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-3 border-t border-slate-800 pt-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-            <p>© {new Date().getFullYear()} KOLLAB. All rights reserved.</p>
-            <div className="flex gap-4">
-              <Link to="/about" className="transition hover:text-brand-green">About</Link>
-              <Link to="/programs" className="transition hover:text-brand-green">Programs</Link>
-              <Link to="/contact" className="transition hover:text-brand-green">Contact</Link>
-            </div>
+          <p>© {new Date().getFullYear()} KOLLAB. All rights reserved.</p>
+          <div className="flex gap-4">
+            <Link to="/about" className="transition hover:text-brand-green">About</Link>
+            <Link to="/programs" className="transition hover:text-brand-green">Programs</Link>
+            <Link to="/contact" className="transition hover:text-brand-green">Contact</Link>
           </div>
+        </div>
       </div>
     </footer>
   )

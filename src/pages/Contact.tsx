@@ -119,9 +119,9 @@ const Contact = () => {
 
   return (
     <div className="overflow-hidden bg-white pb-24 text-brand-navy">
-      <section className="h-screen mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
-        <div className="reveal grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div className="max-w-2xl">
+      <section className="relative min-h-screen ">
+        <div className="mx-auto max-w-360 px-4 py-20 sm:px-6 sm:py-24 lg:px-12 lg:py-28 reveal grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12">
+          <div className="max-w-2xl text-center sm:text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-brand-green/20 bg-brand-green/10 px-4 py-2 text-sm font-semibold text-brand-green">
               <Sparkles className="h-4 w-4" />
               Hubungi KOLLAB
@@ -132,7 +132,7 @@ const Contact = () => {
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
               Baik Anda punya ide, peluang kolaborasi, pertanyaan bisnis, atau sekadar ingin terhubung, kami dengan senang hati ingin mendengar dari Anda.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-start">
               <a href="#contact-form" className="inline-flex items-center justify-center rounded-full bg-brand-navy px-6 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-green">
                 Mulai Percakapan
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -142,50 +142,15 @@ const Contact = () => {
               </a>
             </div>
           </div>
-
-          <div className="relative rounded-[2rem] border border-slate-200 bg-gradient-to-br from-brand-grey via-white to-brand-green/10 p-6 shadow-[0_20px_80px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10">
-            <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top_left,_rgba(52,178,106,0.16),_transparent_36%),radial-gradient(circle_at_bottom_right,_rgba(39,119,201,0.14),_transparent_44%)]" />
-            <div className="relative">
-              <svg viewBox="0 0 520 420" className="w-full" aria-label="Abstract collaboration illustration">
-                <rect x="60" y="72" width="110" height="110" rx="24" fill="#F5F7FA" />
-                <circle cx="116" cy="126" r="26" fill="url(#personA)" />
-                <rect x="352" y="72" width="110" height="110" rx="24" fill="#F5F7FA" />
-                <circle cx="408" cy="126" r="26" fill="url(#personB)" />
-                <rect x="202" y="214" width="116" height="92" rx="26" fill="#F5F7FA" />
-                <circle cx="260" cy="260" r="28" fill="url(#personC)" />
-                <path d="M118 126C182 126 222 158 260 260" stroke="url(#flow)" strokeWidth="10" strokeLinecap="round" />
-                <path d="M408 126C344 126 304 158 260 260" stroke="url(#flow)" strokeWidth="10" strokeLinecap="round" />
-                <path d="M260 260L260 320" stroke="url(#flow)" strokeWidth="10" strokeLinecap="round" />
-                <circle cx="260" cy="320" r="18" fill="#34B26A" />
-                <circle cx="118" cy="126" r="12" fill="#21A6A6" />
-                <circle cx="408" cy="126" r="12" fill="#2777C9" />
-                <circle cx="260" cy="260" r="12" fill="#0F172A" />
-                <defs>
-                  <linearGradient id="personA" x1="90" y1="102" x2="142" y2="152" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#34B26A" />
-                    <stop offset="1" stopColor="#21A6A6" />
-                  </linearGradient>
-                  <linearGradient id="personB" x1="382" y1="102" x2="434" y2="152" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#2777C9" />
-                    <stop offset="1" stopColor="#21A6A6" />
-                  </linearGradient>
-                  <linearGradient id="personC" x1="232" y1="234" x2="288" y2="286" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#0F172A" />
-                    <stop offset="1" stopColor="#2777C9" />
-                  </linearGradient>
-                  <linearGradient id="flow" x1="118" y1="126" x2="260" y2="260" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#34B26A" />
-                    <stop offset="0.5" stopColor="#21A6A6" />
-                    <stop offset="1" stopColor="#2777C9" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
+        </div>
+        <div className="flex md:absolute inset-y-0 right-0 max-w-max md:max-w-1/2">
+          <div className="h-full flex items-center justify-center">
+            <img src="/public/images/Frame 5.png" alt="" className="w-full h-auto" />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-12 lg:py-24">
         <div className="reveal text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-brand-green/20 bg-brand-green/10 px-4 py-2 text-sm font-semibold text-brand-green">
             <Sparkles className="h-4 w-4" />
@@ -199,7 +164,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="reveal relative mt-16 md:mt-20">
+        <div className="reveal relative mt-16 md:mt-20 px-8 md:px-0">
           {/* <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(52,178,106,0.12),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(39,119,201,0.10),_transparent_34%)]" /> */}
           <div className="absolute left-[35px] top-3 hidden h-[calc(100%-1.5rem)] w-px bg-gradient-to-b from-brand-green/60 via-brand-teal/50 to-brand-blue/60 md:block" />
           <div className="space-y-8 md:space-y-10">
@@ -245,7 +210,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section id="contact-form" className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section id="contact-form" className="mx-auto max-w-360 px-4 py-16 sm:px-6 lg:px-12 lg:py-24">
         <div className="reveal grid gap-8 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_24px_80px_rgba(15,23,42,0.06)] sm:p-10 lg:grid-cols-[0.92fr_1.08fr] lg:p-12">
           <div className="max-w-xl">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-blue">Form Kontak</p>
@@ -320,7 +285,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-360 px-6 py-6 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-360 px-4 py-6 sm:px-6 lg:px-12">
         <div className="reveal rounded-[2rem] border border-slate-200 bg-gradient-to-r from-brand-green/10 via-white to-brand-blue/10 p-8 shadow-[0_20px_80px_rgba(15,23,42,0.05)] sm:p-10 lg:p-12">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">Undangan Kolaborasi</p>
@@ -343,7 +308,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section id="faq" className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section id="faq" className="mx-auto max-w-360 px-4 py-16 sm:px-6 lg:px-12 lg:py-24">
         <div className="reveal grid gap-10 lg:grid-cols-[0.9fr_1.35fr] lg:items-start">
           <div className="lg:max-w-[340px]">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-teal">FAQ</p>
@@ -367,7 +332,7 @@ const Contact = () => {
               </a>
             </div>
 
-            
+
           </div>
 
           <div className="reveal w-full lg:max-w-[730px] lg:justify-self-end">
@@ -378,8 +343,8 @@ const Contact = () => {
                   <div
                     key={faq.question}
                     className={`group overflow-hidden rounded-[1.25rem] border transition-all duration-300 ease-out ${isOpen
-                        ? 'border-brand-green bg-[linear-gradient(180deg,rgba(52,178,106,0.09),rgba(255,255,255,1))] shadow-[0_0_0_1px_rgba(52,178,106,0.12)]'
-                        : 'border-slate-200 bg-white hover:border-brand-green/50 hover:bg-brand-green/[0.03]'
+                      ? 'border-brand-green bg-[linear-gradient(180deg,rgba(52,178,106,0.09),rgba(255,255,255,1))] shadow-[0_0_0_1px_rgba(52,178,106,0.12)]'
+                      : 'border-slate-200 bg-white hover:border-brand-green/50 hover:bg-brand-green/[0.03]'
                       }`}
                   >
                     <button
