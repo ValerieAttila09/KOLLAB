@@ -196,7 +196,7 @@ const About = () => {
 
   return (
     <div className="py-24">
-      <div className="w-full bg-linear-to-b from-white to-brand-grey">
+      <div className="relative w-full bg-linear-to-b from-white to-brand-grey">
         <section className="h-[80vh] grid grid-cols-12 max-w-360 mx-auto px-6 md:px-12 pt-8">
           <div className="pr-8 flex flex-col justify-center items-start space-y-6 md:col-span-7 h-full">
             <div className="space-y-4">
@@ -238,10 +238,10 @@ const About = () => {
               </button>
             </div>
           </div>
-          <div className="md:col-span-5 h-full flex items-center justify-center">
-            <img src="/public/images/p.png" alt="" className="w-full h-full object-cover p-6" />
-          </div>
         </section>
+        <div className="absolute inset-y-0 right-0">
+          <img src="/public/images/Frame 3.png" alt="" className="w-full h-full object-cover" />
+        </div>
       </div>
 
       <div className="w-full bg-brand-grey">
