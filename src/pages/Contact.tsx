@@ -119,7 +119,7 @@ const Contact = () => {
 
   return (
     <div className="overflow-hidden bg-white pb-24 text-brand-navy">
-      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section className="h-screen mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
         <div className="reveal grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-brand-green/20 bg-brand-green/10 px-4 py-2 text-sm font-semibold text-brand-green">
@@ -344,25 +344,70 @@ const Contact = () => {
       </section>
 
       <section id="faq" className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
-        <div className="reveal max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-teal">FAQ</p>
-          <h2 className="mt-3 text-3xl font-black text-brand-navy sm:text-4xl">Pertanyaan yang sering muncul sebelum Anda menghubungi kami.</h2>
-        </div>
-        <div className="reveal mt-8 space-y-4">
-          {faqs.map((faq, index) => {
-            const isOpen = openFaq === index
-            return (
-              <div key={faq.question} className="rounded-[1.5rem] border border-slate-200 bg-white shadow-sm">
-                <button type="button" onClick={() => setOpenFaq(isOpen ? -1 : index)} className="flex w-full items-center justify-between px-6 py-5 text-left" aria-expanded={isOpen}>
-                  <span className="text-base font-semibold text-brand-navy">{faq.question}</span>
-                  <ChevronDown className={`h-5 w-5 text-slate-500 transition ${isOpen ? 'rotate-180' : ''}`} />
-                </button>
-                <div className={`grid transition-all duration-300 ${isOpen ? 'grid-rows-[1fr] px-6 pb-5' : 'grid-rows-[0fr] px-6'}`}>
-                  <div className="overflow-hidden text-sm leading-7 text-slate-600">{faq.answer}</div>
-                </div>
-              </div>
-            )
-          })}
+        <div className="reveal grid gap-10 lg:grid-cols-[0.9fr_1.35fr] lg:items-start">
+          <div className="lg:max-w-[340px]">
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-teal">FAQ</p>
+            <h2 className="mt-3 text-3xl font-black leading-tight text-brand-navy sm:text-4xl">
+              Pertanyaan yang sering muncul
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">
+              Semua yang perlu Anda ketahui sebelum menjadi bagian dari ekosistem KOLLAB.
+            </p>
+            <p className="mt-4 text-sm leading-7 text-slate-500">
+              Masih ragu? Tim kami siap membantu Anda memulai percakapan.
+            </p>
+
+            <div className="mt-6">
+              <a
+                href="#contact-form"
+                className="group inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-brand-navy transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand-green hover:text-brand-green"
+              >
+                Contact Us
+                <ArrowRight className="h-4 w-4 transition duration-300 ease-out group-hover:translate-x-1" />
+              </a>
+            </div>
+
+            
+          </div>
+
+          <div className="reveal w-full lg:max-w-[730px] lg:justify-self-end">
+            <div className="space-y-3">
+              {faqs.map((faq, index) => {
+                const isOpen = openFaq === index
+                return (
+                  <div
+                    key={faq.question}
+                    className={`group overflow-hidden rounded-[1.25rem] border transition-all duration-300 ease-out ${isOpen
+                        ? 'border-brand-green bg-[linear-gradient(180deg,rgba(52,178,106,0.09),rgba(255,255,255,1))] shadow-[0_0_0_1px_rgba(52,178,106,0.12)]'
+                        : 'border-slate-200 bg-white hover:border-brand-green/50 hover:bg-brand-green/[0.03]'
+                      }`}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setOpenFaq(isOpen ? -1 : index)}
+                      className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left sm:px-6 sm:py-5"
+                      aria-expanded={isOpen}
+                    >
+                      <span className="flex items-start gap-3">
+                        <span className={`mt-1 h-2.5 w-2.5 rounded-full transition-colors duration-300 ${isOpen ? 'bg-brand-green' : 'bg-slate-300 group-hover:bg-brand-green/70'}`} />
+                        <span className="text-base font-semibold leading-7 text-brand-navy sm:text-lg">{faq.question}</span>
+                      </span>
+                      <ChevronDown className={`h-5 w-5 shrink-0 text-slate-500 transition-all duration-300 ease-out group-hover:translate-x-0.5 ${isOpen ? 'rotate-180 text-brand-green' : ''}`} />
+                    </button>
+
+                    <div className={`grid transition-all duration-300 ease-out ${isOpen ? 'grid-rows-[1fr] px-5 pb-5 sm:px-6' : 'grid-rows-[0fr] px-5 sm:px-6'}`}>
+                      <div className="overflow-hidden">
+                        <div className={`overflow-hidden border-t transition-all duration-300 ease-out ${isOpen ? 'border-brand-green/20 opacity-100' : 'border-transparent opacity-0'}`} />
+                        <div className={`pt-4 text-sm leading-7 text-slate-600 transition-all duration-300 ease-out ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-1 opacity-0'}`}>
+                          {faq.answer}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
         </div>
       </section>
 

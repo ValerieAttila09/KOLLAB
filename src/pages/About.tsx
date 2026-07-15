@@ -195,52 +195,54 @@ const About = () => {
   ]
 
   return (
-    <div className="space-y-24 md:space-y-32 py-24">
-      <section className="h-[80vh] grid grid-cols-12 max-w-360 mx-auto px-6 md:px-12 pt-8">
-        <div className="flex flex-col justify-center items-start space-y-6 md:col-span-7 h-full">
-          <div className="space-y-4">
-            <div className="flex items-center gap-6">
-              <div className="w-16 h-0.5 bg-linear-to-r from-brand-green to-brand-blue" />
-              <h4 className="text-xs start-fade font-bold text-brand-green tracking-widest uppercase">about kollab</h4>
+    <div className="py-24">
+      <div className="w-full bg-linear-to-b from-white to-brand-grey">
+        <section className="h-[80vh] grid grid-cols-12 max-w-360 mx-auto px-6 md:px-12 pt-8">
+          <div className="pr-8 flex flex-col justify-center items-start space-y-6 md:col-span-7 h-full">
+            <div className="space-y-4">
+              <div className="flex items-center gap-6">
+                <div className="w-16 h-0.5 bg-linear-to-r from-brand-green to-brand-blue" />
+                <h4 className="text-xs start-fade font-bold text-brand-green tracking-widest uppercase">about kollab</h4>
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-brand-navy">
+                Grow Through Collaboration<span className="text-brand-green">.</span>
+              </h1>
+              <p className="text-slate-600 text-md">
+                KOLLAB adalah Human Collaboration Ecosystem untuk learner, creator, profesional, dan business builder yang ingin bertumbuh melalui kolaborasi, koneksi, dan peluang nyata.
+              </p>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-brand-navy">
-              Grow Through Collaboration<span className="text-brand-green">.</span>
-            </h1>
-            <p className="text-slate-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis qui impedit consequuntur doloremque unde blanditiis. Unde tenetur consectetur sequi amet cumque, molestias autem placeat voluptas. Numquam vel voluptate eos animi labore placeat, soluta praesentium quasi? Totam modi culpa, molestiae nostrum, veniam placeat vel, dolorum sed similique nisi quis sapiente accusantium!
-            </p>
-          </div>
-          <div className="flex items-center gap-6 justify-start">
-            <div className="rounded-full size-16 border border-neutral-200 overflow-hidden flex items-center justify-center">
-              <img src="/public/images/Main_Icon-removebg-preview.png" alt="" className="size-10" />
+            <div className="flex items-center gap-6 justify-start">
+              <div className="rounded-full size-16 border border-neutral-200 overflow-hidden flex items-center justify-center">
+                <img src="/public/images/Main_Icon-removebg-preview.png" alt="" className="size-10" />
+              </div>
+              <p className="text-lg font-medium text-brand-blue">
+                Where Collaboration Creates Growth
+              </p>
             </div>
-            <p className="text-lg font-medium text-brand-blue">
-              Where Collaboration Creates Growth
-            </p>
+            <div className="flex items-center gap-4 w-full">
+              <button className="flex items-center justify-center gap-4 bg-linear-to-r text-lg from-brand-green to-brand-blue text-white py-3 px-6 rounded-lg font-medium">
+                <span className="">
+                  Join Growth Circle
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </button>
+              <button className="flex items-center justify-center gap-4 bg-white border border-neutral-300 text-brand-navy py-3 px-6 rounded-lg font-medium">
+                <span className="">
+                  Explore Creator Class
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </button>
+            </div>
           </div>
-          <div className="flex items-center gap-4 w-full">
-            <button className="flex items-center justify-center gap-4 bg-linear-to-r text-lg from-brand-green to-brand-blue text-white py-3 px-6 rounded-lg font-medium">
-              <span className="">
-                Join Growth Circle
-              </span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-            </button>
-            <button className="flex items-center justify-center gap-4 bg-white border border-neutral-300 text-brand-navy py-3 px-6 rounded-lg font-medium">
-              <span className="">
-                Explore Creator Class
-              </span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-            </button>
+          <div className="md:col-span-5 h-full flex items-center justify-center">
+            <img src="/public/images/p.png" alt="" className="w-full h-full object-cover p-6" />
           </div>
-        </div>
-        <div className="md:col-span-5 h-full flex items-center justify-center">
-          <img src="/public/images/p.png" alt="" className="w-full h-full object-cover p-6" />
-        </div>
-      </section>
+        </section>
+      </div>
 
       <div className="w-full bg-brand-grey">
         <section className="h-screen grid grid-cols-12 max-w-360 mx-auto px-6 md:px-12 py-12">
@@ -286,7 +288,7 @@ const About = () => {
         </section>
       </div>
 
-      <section ref={statsSectionRef} className="max-w-360 mx-auto px-6 md:px-12 pt-8 py-12">
+      <section ref={statsSectionRef} className="max-w-360 mx-auto px-6 md:px-12 pt-8 py-12 sm:py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center h-full">
           {/* Left Side - Content */}
           <div className="lg:col-span-6 space-y-6">
@@ -350,13 +352,7 @@ const About = () => {
 
               {/* Central spinning logo */}
               <div className="absolute w-24 h-24 rounded-full bg-white shadow-2xl border border-slate-100 flex items-center justify-center z-10 transition-transform duration-500 hover:scale-110">
-                <div className="w-14 h-14 animate-pulse">
-                  <svg viewBox="0 0 100 100" className="w-full h-full">
-                    <rect x="15" y="10" width="18" height="80" rx="4" fill="#34B26A" />
-                    <path d="M40,50 L75,15 C78,12 83,14 83,18 L83,40 L58,62 L40,50 Z" fill="#21A6A6" />
-                    <path d="M48,58 L80,90 C83,93 88,91 88,87 L88,65 L62,45 L48,58 Z" fill="#2777C9" />
-                  </svg>
-                </div>
+                <img src="/public/images/Main_Icon-removebg-preview.png" alt="" className="w-full h-full p-4" />
               </div>
 
               {/* Node 1: People (Top) */}
@@ -475,7 +471,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="max-w-360 mx-auto px-6 md:px-12">
+      <section className="max-w-360 mx-auto px-6 md:px-12 py-12 sm:py-16 md:py-24">
         <div className="max-w-3xl space-y-4 mb-16">
           <h4 className="text-xs font-bold text-brand-blue tracking-widest uppercase">Brand Personality</h4>
           <h2 className="text-3xl md:text-5xl font-black text-brand-navy leading-tight tracking-tight">

@@ -88,7 +88,7 @@ const Home = () => {
         visualRef={visualRef}
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
         <div className="reveal-about grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">Tentang KOLLAB</p>
@@ -107,43 +107,13 @@ const Home = () => {
               ))}
             </div>
           </div>
-          <div className="relative rounded-[2.5rem] border border-slate-200 bg-gradient-to-br from-brand-green/10 via-white to-brand-blue/10 p-8 shadow-[0_20px_80px_rgba(15,23,42,0.08)] sm:p-12">
-            <svg viewBox="0 0 520 420" className="w-full" aria-label="KOLLAB ecosystem illustration">
-              <defs>
-                <linearGradient id="gradGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#34B26A" />
-                  <stop offset="100%" stopColor="#21A6A6" />
-                </linearGradient>
-                <linearGradient id="gradBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#21A6A6" />
-                  <stop offset="100%" stopColor="#2777C9" />
-                </linearGradient>
-              </defs>
-              <circle cx="260" cy="210" r="180" fill="none" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="4,4" opacity="0.5" />
-              <circle cx="260" cy="210" r="120" fill="none" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="4,4" opacity="0.5" />
-
-              <circle cx="260" cy="80" r="32" fill="url(#gradGreen)" />
-              <text x="260" y="90" textAnchor="middle" fontSize="14" fontWeight="bold" fill="white">Connect</text>
-
-              <circle cx="400" cy="210" r="32" fill="url(#gradBlue)" />
-              <text x="400" y="220" textAnchor="middle" fontSize="14" fontWeight="bold" fill="white">Grow</text>
-
-              <circle cx="120" cy="210" r="32" fill="#2777C9" />
-              <text x="120" y="220" textAnchor="middle" fontSize="14" fontWeight="bold" fill="white">Learn</text>
-
-              <circle cx="260" cy="340" r="32" fill="#0F172A" />
-              <text x="260" y="350" textAnchor="middle" fontSize="14" fontWeight="bold" fill="white">Build</text>
-
-              <line x1="260" y1="112" x2="260" y2="170" stroke="url(#gradGreen)" strokeWidth="3" strokeLinecap="round" />
-              <line x1="290" y1="98" x2="370" y2="180" stroke="url(#gradBlue)" strokeWidth="3" strokeLinecap="round" />
-              <line x1="230" y1="98" x2="150" y2="180" stroke="#2777C9" strokeWidth="3" strokeLinecap="round" opacity="0.6" />
-              <line x1="260" y1="242" x2="260" y2="308" stroke="#0F172A" strokeWidth="3" strokeLinecap="round" opacity="0.6" />
-            </svg>
+          <div className="relative rounded-[2.5rem] border border-slate-200 bg-gradient-to-br from-brand-green/10 via-white to-brand-blue/10 shadow-[0_20px_80px_rgba(15,23,42,0.08)] overflow-hidden">
+            <img src="/public/images/Home_Section2.jpeg" alt="" className="w-full h-auto" />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
         <div className="reveal-why grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-blue">Mengapa KOLLAB Ada</p>
@@ -179,7 +149,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
         <div className="reveal-what mb-12 max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">Apa yang Kami Lakukan</p>
           <h2 className="mt-4 text-4xl font-black leading-tight text-brand-navy sm:text-5xl">
@@ -211,7 +181,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
         <div className="reveal-programs mb-12 max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-teal">Program Kami</p>
           <h2 className="mt-4 text-4xl font-black leading-tight text-brand-navy sm:text-5xl">
@@ -248,7 +218,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
         <div className="reveal-audience rounded-[2rem] border border-slate-200 bg-brand-grey p-8 sm:p-10 lg:p-12">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-teal">Untuk Siapa</p>
           <h2 className="mt-3 text-4xl font-black text-brand-navy sm:text-5xl">Untuk orang yang ingin tumbuh bersama komunitas yang selaras.</h2>
@@ -258,7 +228,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section className="mx-auto max-w-360 px-6 py-16 sm:px-8 lg:px-12 lg:py-24">
         <div className="reveal-values mb-12 max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">Nilai Komunitas</p>
           <h2 className="mt-3 text-4xl font-black text-brand-navy sm:text-5xl">Nilai yang menjaga kami tetap hangat dan kredibel.</h2>
@@ -268,7 +238,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-20 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-360 px-6 pb-20 sm:px-8 lg:px-12">
         <div className="reveal-partner rounded-[2rem] border border-slate-200 bg-gradient-to-r from-brand-green/10 via-white to-brand-blue/10 p-8 shadow-sm sm:p-10 lg:p-12">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-green">Berkolaborasi Bersama Kami</p>

@@ -70,7 +70,7 @@ const Navbar = () => {
     { name: 'About', path: '/about' },
     { name: 'Programs', path: '/programs' },
     // { name: 'Community', path: '/programs#community-activation' },
-    { name: 'Partnership', path: '/programs#partnership-program' },
+    // { name: 'Partnership', path: '/programs#partnership-program' },
     { name: 'Contact', path: '/contact' },
   ]
 
@@ -96,7 +96,7 @@ const Navbar = () => {
           <Link to="/" className="w-auto">
             <img src="public/images/Main_Logo-without_taglines-removebg-preview.png" alt="KOLLAB" className="h-20 w-auto object-cover" />
           </Link>
-        </div>
+      </div>
 
         {/* Desktop Nav Links */}
         <div ref={menuLinksRef} className="hidden md:flex items-center space-x-8 font-medium">

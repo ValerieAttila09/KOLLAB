@@ -17,13 +17,7 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-6">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <rect x="15" y="10" width="18" height="80" rx="4" fill="#34B26A" />
-                  <path d="M40,50 L75,15 C78,12 83,14 83,18 L83,40 L58,62 L40,50 Z" fill="#21A6A6" />
-                  <path d="M48,58 L80,90 C83,93 88,91 88,87 L88,65 L62,45 L48,58 Z" fill="#2777C9" />
-                </svg>
-              </div>
+              <img src="/public/images/Main_Icon-removebg-preview.png" alt="" className="size-10 p-4" />
               <span className="text-2xl font-bold tracking-tight text-white">
                 kollab<span className="text-brand-green">.</span>
               </span>
